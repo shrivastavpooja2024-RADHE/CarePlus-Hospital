@@ -1,0 +1,571 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fbff;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   COLOR VARIABLES
+=========================== */
+
+:root{
+
+--primary:#0F4C81;
+--secondary:#18A999;
+--accent:#2ECC71;
+--white:#ffffff;
+--dark:#222;
+--light:#f8fbff;
+--shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 7%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(15px);
+
+-webkit-backdrop-filter:blur(15px);
+
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+
+z-index:1000;
+
+transition:.4s;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+width:65px;
+
+height:65px;
+
+object-fit:contain;
+
+}
+
+.logo-text h1{
+
+font-size:28px;
+
+color:var(--primary);
+
+font-weight:700;
+
+}
+
+.logo-text p{
+
+font-size:14px;
+
+color:#666;
+
+}
+
+.header-right{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.navbar{
+
+display:flex;
+
+gap:35px;
+
+}
+
+.navbar a{
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#333;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.navbar a:hover{
+
+color:var(--secondary);
+
+}
+
+.navbar a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:3px;
+
+background:var(--secondary);
+
+transition:.35s;
+
+}
+
+.navbar a:hover::after{
+
+width:100%;
+
+}
+
+#theme-btn{
+
+width:48px;
+
+height:48px;
+
+border:none;
+
+border-radius:50%;
+
+background:#eef7ff;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+#theme-btn:hover{
+
+transform:rotate(180deg);
+
+background:#dcefff;
+
+}
+
+.menu-toggle{
+
+display:none;
+
+font-size:34px;
+
+cursor:pointer;
+
+color:var(--primary);
+
+}
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.slider{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:1;
+
+}
+
+.slide{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+opacity:0;
+
+transition:opacity 1.2s ease-in-out;
+
+}
+
+.slide.active{
+
+opacity:1;
+
+}
+
+.slide img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+/* Dark Overlay */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(10,35,60,.58);
+
+z-index:2;
+
+}
+
+/* Hero Content */
+
+.hero-content{
+
+position:relative;
+
+z-index:3;
+
+text-align:center;
+
+max-width:760px;
+
+padding:40px;
+
+margin-top:70px;
+
+}
+
+/* Badge */
+
+.hero-badge{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(8px);
+
+-webkit-backdrop-filter:blur(8px);
+
+border:1px solid rgba(255,255,255,.25);
+
+border-radius:50px;
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:600;
+
+margin-bottom:28px;
+
+letter-spacing:.5px;
+
+}
+
+/* Heading */
+
+.hero-content h1{
+
+font-size:68px;
+
+font-weight:800;
+
+line-height:1.15;
+
+color:#fff;
+
+margin-bottom:22px;
+
+text-shadow:0 6px 20px rgba(0,0,0,.45);
+
+}
+
+/* Paragraph */
+
+.hero-content p{
+
+font-size:22px;
+
+line-height:1.8;
+
+font-weight:400;
+
+color:#f4f4f4;
+
+margin-bottom:35px;
+
+}
+
+/* Buttons */
+
+.hero-btn{
+
+display:inline-block;
+
+padding:17px 38px;
+
+margin:8px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+/* Primary */
+
+.hero-btn{
+
+background:#18A999;
+
+color:#fff;
+
+box-shadow:0 10px 30px rgba(24,169,153,.35);
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+background:#0f8b7d;
+
+}
+
+/* Secondary */
+
+.secondary-btn{
+
+background:transparent;
+
+border:2px solid #fff;
+
+color:#fff;
+
+}
+
+.secondary-btn:hover{
+
+background:#fff;
+
+color:#0F4C81;
+
+}
+
+/* Scroll Down */
+
+.scroll-down{
+
+margin-top:45px;
+
+font-size:32px;
+
+color:#fff;
+
+animation:scrollDown 1.6s infinite;
+
+}
+
+@keyframes scrollDown{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+}
+/* ===========================
+   HERO RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+font-size:52px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-content{
+
+padding:20px;
+
+margin-top:90px;
+
+}
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+.hero-btn{
+
+display:block;
+
+width:220px;
+
+margin:15px auto;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-content h1{
+
+font-size:30px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+.hero-badge{
+
+font-size:13px;
+
+}
+
+}
