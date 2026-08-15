@@ -299,17 +299,21 @@ Our Services
 
 <div class="appointment-container">
 
-<form class="appointment-form">
+<form class="appointment-form" action="https://formsubmit.co/shrivastavpooja2024@gmail.com" method="POST">
 
-<input type="text" placeholder="Full Name" required>
+<input type="hidden" name="_subject" value="New CarePlus Hospital Appointment">
 
-<input type="email" placeholder="Email Address" required>
+<input type="hidden" name="_captcha" value="false">
 
-<input type="tel" placeholder="Phone Number" required>
+<input type="text" name="name" placeholder="Full Name" required>
 
-<input type="date" required>
+<input type="email" name="email" placeholder="Email Address" required>
 
-<select required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="date" name="appointment_date" required>
+
+<select name="department" required>
 
 <option>Select Department</option>
 
@@ -325,7 +329,7 @@ Our Services
 
 </select>
 
-<textarea placeholder="Describe Your Problem"></textarea>
+<textarea name="Problem" placeholder="Describe Your Problem"></textarea>
 
 <button type="submit">Book Appointment</button>
 
